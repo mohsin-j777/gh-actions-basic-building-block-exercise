@@ -1,0 +1,8 @@
+name: Issue Created Workflow
+on: issues
+jobs:
+  issue-created:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output Event Details
+        run: echo "Issue created: ${{ toJson(github.event) }}"
